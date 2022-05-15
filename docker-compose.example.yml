@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+  health_bsc:
+    image: wowswap/liquidation-bot:master
+    restart: unless-stopped
+    env_file: .env
+    container_name: liquidation_bsc
+    environment:
+      CHAIN_ID: 56

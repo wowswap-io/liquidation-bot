@@ -1,0 +1,32 @@
+{
+  "name": "WOWSwap Liqidation bot",
+  "description": "NodeJS implementation of Liquidation software",
+  "repository": "https://github.com/wowswap-io/liquidation-bot/tree/main",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+  "keywords": ["node", "typescript", "heroku"],
+  "image": "heroku/nodejs",
+  "env": {
+    "NODE_ENV": "production",
+    "NPM_CONFIG_PRODUCTION": "false",
+    "YARN_PRODUCTION": "false",
+    "PRIVATE_KEY": {
+      "description": "Enter your private key of liquidator wallet",
+      "value": ""
+    },
+    "CHAIN_ID": {
+      "description": "Id for Blockchain connection configs. Supported: 1(Ethereum), 56(BinanceSmartChain), 128(Heco), 137(Matic), 43114(Avalance). Default: BinanceSmartChain",
+      "value": "56"
+    },
+    "SLEEP_TIME": {
+      "value": "250"
+    },
+    "START_BLOCK": {
+      "value": "1"
+    },
+    "SENTRY_DSN": {
+      "description": "DSN for error reporting. Disables Sentry if empty",
+      "value": "",
+      "required": false
+    }
+  }
+}

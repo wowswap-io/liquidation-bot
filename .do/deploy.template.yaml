@@ -1,0 +1,17 @@
+spec:
+  name: wowswap-liquidation-bot
+  workers:
+    - name: bot
+      instance_size_slug: basic-s
+      instance_count: 1
+      image:
+        registry_type: DOCKER_HUB
+        registry:  wowswap
+        repository: liquidation-bot
+        tag: master
+      envs:
+        - key: PRIVATE_KEY
+          value: '4e...6d'
+          type: SECRET
+        - key: CHAIN_ID
+          value: '56'

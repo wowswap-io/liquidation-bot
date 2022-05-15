@@ -1,0 +1,13 @@
+.idea
+.vscode
+.git
+
+.env
+.snapshot
+
+lib
+node_modules
+tsconfig.tsbuildinfo
+yarn-error.log
+
+docker-compose.yml

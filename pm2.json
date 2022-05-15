@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "liquid-bot",
+      "script": "./lib/app.js",
+      "args": [
+        "https://bsc-dataseed2.binance.org",
+        "0x67464d0947CfCA965A1ac2dded97b8C3c9921865",
+        "0x1Ee38d535d541c55C9dae27B12edf090C608E6Fb",
+        "1000"
+      ],
+      "exec_mode" : "cluster",
+      "instances": 1,
+      "watch": false,
+      "max_memory_restart": "1G",
+      "max_restarts": 1,
+      "error_file": ".logs/pm2_liquid-bot_error.log",
+      "out_file": ".logs/pm2_liquid-bot_out.log",
+      "pid_file": ".pm2/liquid-bot.pid",
+      "merge_logs": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
