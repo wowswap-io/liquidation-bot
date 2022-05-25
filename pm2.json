@@ -12,7 +12,7 @@
       "exec_mode" : "cluster",
       "instances": 1,
       "watch": false,
-      "max_memory_restart": "1G",
+      "max_memory_restart": "2.5G",
       "max_restarts": 1,
       "error_file": ".logs/pm2_liquid-bot_error.log",
       "out_file": ".logs/pm2_liquid-bot_out.log",
