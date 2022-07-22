@@ -3,6 +3,8 @@ import { init as sentryInit, addBreadcrumb as sentryAddBreadcrumb, captureMessag
 export function init(dsn: string | undefined, extra: { [key: string]: string }) {
   sentryInit({
     dsn,
+    environment: process.env.RUN_ENV ?? "production",
+    release: process.env.SENTRY_RELEASE,
     beforeBreadcrumb: (crumb, _) => {
       if (crumb.category === "console" && crumb.message?.charAt(0) === '[') return null; // Remove logs from addBreadcrumb
       if (crumb.category === "http") return null; // Remove http calls

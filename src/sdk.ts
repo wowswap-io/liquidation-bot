@@ -7,7 +7,7 @@ import path from 'path'
 function providerFor(config: { provider: { url: string } }): JsonRpcProvider | WebSocketProvider {
   const providerUrl = process.env.PROVIDER_URL || config.provider.url
 
-  if (providerUrl.startsWith('wss://')) {
+  if (providerUrl.startsWith('ws')) {
     return new WebSocketProvider(providerUrl)
   }
 
