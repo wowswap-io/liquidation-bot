@@ -1,6 +1,6 @@
 {
   "name": "wow-liquidation-bot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WOWSwap Liquidation bot",
   "main": "index.js",
   "repository": "https://github.com/wowswap-io/liquidation-bot",

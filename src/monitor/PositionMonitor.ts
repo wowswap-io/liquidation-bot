@@ -8,7 +8,6 @@ import { defined, fewRetry, infRetry } from '../utils'
 import { AbstractMonitor } from './AbstractMonitor'
 import { HeightMonitor } from './HeightMonitor'
 import { Pair, Position } from './models'
-import { healthUpdate } from '../utils/health';
 import axios from 'axios';
 import BigNumber from 'bignumber.js';
 import { IGNORED_PAIRS } from '../utils/constants'
@@ -185,7 +184,6 @@ export class PositionMonitor extends AbstractMonitor<Position> {
           )
         }))
 
-    healthUpdate(this.context.metrics)
     this.context.metrics.update('position_monitor_update_holders_duration', Number(new Date()) - startedAt)
   }
 
